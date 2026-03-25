@@ -1,12 +1,385 @@
-<!DOCTYPE html>
-<html lang="nl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio" />
-    <title>JOVALO | My Portfolio </title>
-</head>
-<body>
-    <h1>Test</h1>
-</body>
+<!doctype html>
+<html lang="nl" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portfolio van Joris van Loon" />
+    <title>Mijn portfolio | JOVALO.nl</title>
+    <link rel="stylesheet" href="/styles/reset.css" />
+    <link rel="stylesheet" href="/styles/spacing.css" />
+    <link rel="stylesheet" href="/styles/styleguide.css" />
+    <link rel="stylesheet" href="/styles/accessibilty.css" />
+    <link rel="stylesheet" href="/styles/default.css" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      href="/images/favicon/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link rel="icon" type="image/svg+xml" href="/images/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="/images/favicon/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/images/favicon/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="/images/favicon/site.webmanifest" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- ── SKIP LINK ────────────────────────────────────────── -->
+    <a class="skip-link" href="#main-content">Ga naar hoofdinhoud</a>
+
+    <!-- ── THEME TOGGLE ─────────────────────────────────────── -->
+    <button
+      class="theme-toggle"
+      type="button"
+      aria-label="Schakel naar lichte modus"
+      aria-pressed="false"
+    >
+      <span aria-hidden="true">☀</span>
+    </button>
+
+    <!-- ── PAGE ─────────────────────────────────────────────── -->
+    <div class="page">
+      <main id="main-content" tabindex="-1">
+        <div class="bento">
+          <!-- ── CEL 1: HERO ───────────────────────────────── -->
+          <article class="cell cell--hero" aria-labelledby="hero-heading">
+            <div class="flex-container">
+              <header>
+                <h1 id="hero-heading" class="hero-name">Joris van Loon</h1>
+                <p class="hero-title">
+                  Front-end Developer | 9+ jaar ervaring | WCAG | Extern
+                  Deskundige
+                </p>
+              </header>
+
+              <p class="hero-intro">
+                Front-end developer met meer dan 9 jaar ervaring en een oprechte
+                passie voor semantische HTML. Gespecialiseerd in Vue.js, Nuxt en
+                SCSS, met altijd aandacht voor toegankelijkheid en moderne
+                technieken. Toegankelijkheid is voor mij geen afvinklijstje — ik
+                ken de WCAG AA-richtlijnen en pas ze toe in de praktijk. 
+                
+                <br></br />
+                Ik hecht veel waarde aan heldere communicatie, zowel in code als
+                daarbuiten. Of het nu gaat om technische documentatie, een
+                toelichting aan een klant of samenwerking in een team — ik breng
+                dingen graag gestructureerd en begrijpelijk over.
+                <br /><br />
+                Naast mijn werk als developer begeleid ik meerdere keren per
+                jaar studenten — zowel als stagebegeleider als extern deskundige
+                bij afstudeerzittingen. Daarnaast heb ik ook groepen binnen- en
+                buitenlandse studenten begeleid bij gezamenlijke opdrachten.
+                Begeleiding ligt me, en de combinatie van technische kennis en
+                communicatieve vaardigheden helpt me daarin.
+                <br /><br />
+                Buiten het developen ben ik graag gezien op de wielrenfiets en
+                ben ik vervent PSV-supporter.
+              </p>
+
+              <ul class="skills" aria-label="Technische vaardigheden">
+                <li class="skill">HTML</li>
+                <li class="skill">CSS</li>
+                <li class="skill">JavaScript</li>
+                <li class="skill">TypeScript</li>
+                <li class="skill">NPM</li>
+                <li class="skill">Vue</li>
+                <li class="skill">Nuxt</li>
+                <li class="skill">WCAG</li>
+                <li class="skill">SCSS</li>
+                <li class="skill">Git</li>
+                <li class="skill">MVC</li>
+                <li class="skill">C#</li>
+                <li class="skill">Accessibility</li>
+                <li class="skill">Wordpress</li>
+                <li class="skill">Responsive Design</li>
+                <li class="skill">SEO</li>
+              </ul>
+
+              <!-- <div class="hero-cta">
+                <a href="#contact" class="btn btn--primary">Neem contact op</a>
+                <a
+                  href="https://www.linkedin.com/in/jouwprofiel"
+                  class="btn btn--outline"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  LinkedIn
+                  <span class="visually-hidden">(opent in nieuw tabblad)</span>
+                </a>
+              </div> -->
+
+              <div class="avatar-container" aria-hidden="true">
+                <div class="avatar-circle">
+                  <img
+                    src="/images/joris.jpg"
+                    class="avatar"
+                    alt="Joris van Loon, Front-end Developer"
+                  />
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- ── CEL 2: WERKERVARING ───────────────────────── -->
+          <section class="cell cell--work" aria-labelledby="work-heading">
+            <h2 id="work-heading" class="cell-heading">Werkervaring</h2>
+
+            <ol class="timeline" aria-label="Werkervaring chronologisch">
+              <li class="timeline-item">
+                <div class="timeline-header">
+                  <div>
+                    <h3 class="timeline-role">Front-end Developer</h3>
+                    <p class="timeline-company">The Cre8ion.Lab</p>
+                  </div>
+                  <time class="timeline-period" datetime="2019"
+                    >2019 &mdash; heden</time
+                  >
+                </div>
+                <p class="timeline-desc">
+                  Verantwoordelijk voor de front-end architectuur van meerdere
+                  grootschalige webapplicaties en websites. Opzetten van
+                  componentenbibliotheken in Vue 3 & Nuxt, code reviews en
+                  begeleiding van junior developers.
+                </p>
+              </li>
+
+              <li class="timeline-item">
+                <div class="timeline-header">
+                  <div>
+                    <h3 class="timeline-role">Stagiaire Front-end Developer</h3>
+                    <p class="timeline-company">The Cre8ion.Lab</p>
+                  </div>
+                  <time class="timeline-period" datetime="2018"
+                    >2018 &mdash; 2019</time
+                  >
+                </div>
+                <p class="timeline-desc">
+                  Tijdens mijn afstudeerstage bouwde ik een bestaande website om naar een progressive web app.
+                </p>
+              </li>
+
+              <li class="timeline-item">
+                <div class="timeline-header">
+                  <div>
+                    <h3 class="timeline-role">Junior Front-end Developer</h3>
+                    <p class="timeline-company">Heerlijk Hulp</p>
+                  </div>
+                  <time class="timeline-period" datetime="2017"
+                    >2017 &mdash; 2019</time
+                  >
+                </div>
+                <p class="timeline-desc">
+                  Bij Heerlijk hulp heb ik 2 jaar lang gewerkt aan meerdere
+                  websites. Gedreven door PHP aan de achterkant en een mix van
+                  HTML, CSS, Javascript en bootstrap aan de voorkant. Mijn focus
+                  lag op het verbeteren van de gebruikerservaring en het
+                  implementeren van nieuwe features.
+                </p>
+              </li>
+
+              <li class="timeline-item">
+                <div class="timeline-header">
+                  <div>
+                    <h3 class="timeline-role">Stagiaire Front-end Developer</h3>
+                    <p class="timeline-company">Bestpoint</p>
+                  </div>
+                  <time class="timeline-period" datetime="2017"
+                    >2017 &mdash; 2017</time
+                  >
+                </div>
+                <p class="timeline-desc">
+                  Tijdens mijn studie liep mijn eerste stage bij Bestpoint. Hier
+                  heb ik ervaring opgedaan met het bouwen van websites en het
+                  werken in een professionele omgeving. Mijn focus lag op het
+                  ontwikkelen van responsive websites en het verbeteren van de
+                  gebruikerservaring. Dit werd allemaal gebouwd in wordpress.
+                </p>
+              </li>
+
+              <li class="timeline-item">
+                <div class="timeline-header">
+                  <div>
+                    <h3 class="timeline-role">Technische ondersteuning</h3>
+                    <p class="timeline-company">Student aan huis</p>
+                  </div>
+                  <time class="timeline-period" datetime="2011"
+                    >2011 &mdash; 2017</time
+                  >
+                </div>
+                <p class="timeline-desc">
+                  Voor mijn werk bij Student aan huis heb ik technische
+                  ondersteuning geboden. Dit varieerde van het oplossen van
+                  softwareproblemen tot het geven van advies over hardware en
+                  het helpen bij het opzetten van netwerken.
+                </p>
+              </li>
+            </ol>
+          </section>
+
+          <!-- ── CEL 3: NEVENROLLEN ────────────────────────── -->
+          <section class="cell cell--side" aria-labelledby="side-heading">
+            <h2 id="side-heading" class="cell-heading">Nevenrollen</h2>
+
+            <ul class="roles" aria-label="Nevenrollen en activiteiten">
+              <li class="role-item">
+                <div>
+                  <h3 class="role-title">Stagebegeleider</h3>
+                  <p class="role-desc">
+                    Begeleiding van HBO-studenten tijdens hun afstudeerstage.
+                    Focus op professionele ontwikkeling en vakinhoudelijke
+                    verdieping.
+                  </p>
+                </div>
+              </li>
+
+              <li class="role-item">
+                <div>
+                  <h3 class="role-title">
+                    Extern deskundige afstudeerzittingen
+                  </h3>
+                  <p class="role-desc">
+                    Beoordeling van afstudeerprojecten als onafhankelijk
+                    vakdeskundige voor HBO-opleidingen in de richting ICT en
+                    Media.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </section>
+
+          <!-- ── CEL 4: PROJECTEN ───────────────────────────────── -->
+          <section
+            class="cell cell--projects"
+            aria-labelledby="projects-heading"
+          >
+            <h2 id="projects-heading" class="cell-heading">Projecten</h2>
+
+            <ul class="roles" aria-label="Projecten">
+              <li class="role-item">
+                <div>
+                  <h3 class="role-title">De slimste mens in Nuxt en Vue</h3>
+                  <p class="role-desc">
+                    De bekendste quiz van de Nederlandse TV nagemaakt in Vue.js.
+                    Een JSON file biedt de vragen per ronde inclusief de punten.
+                    Geheel te bedienen met het toetsenbord.
+                  </p>
+
+                  <ul
+                    class="skills"
+                    aria-label="Technische vaardigheden bij dit project"
+                  >
+                    <li class="skill">HTML</li>
+                    <li class="skill">CSS</li>
+                    <li class="skill">JavaScript</li>
+                  </ul>
+                </div>
+              </li>
+
+              <li class="role-item">
+                <div>
+                  <h3 class="role-title">
+                    Een voetbalshirt collectie app gebouwd in Nuxt & Vue,
+                    aangedreven door SCSS, Typescript en Pinia.
+                  </h3>
+                  <p class="role-desc">
+                    De voetbalshirt-collectie begon uit te puilen, maar stond
+                    nergens vastgelegd. Dat was genoeg reden om een eigen app te
+                    bouwen om de collectie bij te houden.
+                  </p>
+                  <ul
+                    class="skills"
+                    aria-label="Technische vaardigheden bij dit project"
+                  >
+                    <li class="skill">HTML</li>
+                    <li class="skill">Nuxt</li>
+                    <li class="skill">Vue</li>
+                    <li class="skill">SCSS</li>
+                    <li class="skill">Typescript</li>
+                    <li class="skill">Pinia</li>
+                  </ul>
+                </div>
+              </li>
+              <li class="role-item">
+                <div>
+                  <h3 class="role-title">
+                    Een auto collectie app gebouwd in Nuxt & Vue. Gebasseerd op
+                    een Nuxt cursus.
+                  </h3>
+                  <p class="role-desc">
+                    Om Nuxt kennis op te doen heb ik een cursus aangeschaft
+                    waarin de basics werden uitgelegd. Dit resulteerde in een
+                    applicatie om een auto te kopen.
+                  </p>
+                  <ul
+                    class="skills"
+                    aria-label="Technische vaardigheden bij dit project"
+                  >
+                    <li class="skill">HTML</li>
+                    <li class="skill">Nuxt</li>
+                    <li class="skill">Vue</li>
+                    <li class="skill">SCSS</li>
+                    <li class="skill">Typescript</li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </section>
+
+          <!-- ── CEL 5: BLOG ────────────────────────── -->
+          <section class="cell cell--blog" aria-labelledby="blog-heading">
+            <h2 id="blog-heading" class="cell-heading">Blog</h2>
+
+            <article class="blog-post" aria-labelledby="post-heading">
+              <time class="post-date" datetime="2025-03-01">1 maart 2025</time>
+              <h3 id="post-heading" class="post-title">TBC</h3>
+              <!-- <p class="post-excerpt">
+                WCAG wordt vaak gezien als een checklist die je aan het einde
+                van een project afvinkt. Maar toegankelijkheid begint bij de
+                eerste wireframe — niet bij de laatste sprint.
+              </p>
+              <a href="/blog/toegankelijkheid" class="post-link">
+                Lees verder
+                <span class="visually-hidden"
+                  >: Waarom toegankelijkheid geen afterthought mag zijn</span
+                >
+              </a> -->
+            </article>
+          </section>
+
+          <!-- ── CEL 6: CONTACT ────────────────────────────── -->
+          <section
+            class="cell cell--contact"
+            id="contact"
+            aria-labelledby="contact-heading"
+          >
+            <h2 id="contact-heading" class="cell-heading">Contact</h2>
+            <p class="contact-intro">
+              Beschikbaar voor een goed gesprek met een lekkere bak koffie.
+            </p>
+            <a
+              href="/"
+              class="btn btn--primary"
+              aria-label="Stuur een e-mail naar info@jovalo.nl"
+            >
+              Stuur een mail
+            </a>
+          </section>
+
+          <!-- <div class="cell cell--placeholder" aria-hidden="true"></div> -->
+        </div>
+      </main>
+    </div>
+
+    <script src="default.js"></script>
+  </body>
 </html>
