@@ -2,8 +2,8 @@
 [data-theme=dark] {
   --color-bg: #070511;
   --color-bg-cell: #0f0d1a;
-  --color-accent-1: #6366f1;
-  --color-accent-2: #d03f89;
+  --color-accent-1: #7577f5;
+  --color-accent-2: #dc4d94;
   --color-text-muted: #949aa6;
   --color-text: #ffffff;
   --shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
@@ -292,11 +292,11 @@ body {
 }
 
 .btn--primary {
-  background: var(--color-accent-1);
-  color: #ffffff;
+  background: var(--color-accent-2);
+  color: var(--color-bg);
 }
 .btn--primary:hover {
-  background: var(--color-accent-2);
+  background: var(--color-accent-1);
   box-shadow: 0 4px 16px rgba(99, 102, 241, 0.4);
 }
 
