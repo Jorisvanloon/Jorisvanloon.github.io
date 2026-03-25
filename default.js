@@ -19,7 +19,6 @@ function updateToggle() {
   toggle.querySelector('[aria-hidden]').textContent = isDark ? '☀' : '☾';
 }
 
-// Luister naar systeemwijzigingen terwijl de pagina open is
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
   root.setAttribute('data-theme', e.matches ? 'dark' : 'light');
   updateToggle();
