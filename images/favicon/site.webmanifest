@@ -1,6 +1,6 @@
 {
-  "name": "MyWebSite",
-  "short_name": "MySite",
+  "name": "jovalo.nl",
+  "short_name": "jovalo.nl",
   "icons": [
     {
       "src": "/images/favicon/web-app-manifest-192x192.png",
