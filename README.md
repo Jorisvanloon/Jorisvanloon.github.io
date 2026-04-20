@@ -12,7 +12,7 @@ Personal portfolio built with HTML, SCSS and vanilla JavaScript. Designed as a b
 
 Built with WCAG 2.1 AA in mind. Tested with:
 
-- [WCAG.nl scanner](https://wcag.nl)
+- [WCAG.nl](https://wcag.nl)
 - [WAVE Web Accessibility Evaluation Tool](https://wave.webaim.org)
 
 Attention was paid to:
