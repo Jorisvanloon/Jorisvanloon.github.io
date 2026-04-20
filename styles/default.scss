@@ -1,4 +1,4 @@
-// ── KLEURENPALET ─────────────────────────────────────────────────────────────
+// ── COLOR PALETTE ─────────────────────────────────────────────────────────────
 
 [data-theme="dark"] {
   --color-bg: #070511;
@@ -14,12 +14,23 @@
 [data-theme="light"] {
   --color-bg: #f4f3ff;
   --color-bg-cell: #ffffff;
-  --color-accent-1: #6366f1;
-  --color-accent-2: #d03f89;
+  --color-accent-1: #4f46e5;
+  --color-accent-2: #b8306f;
   --color-text-muted: #4b4f5e;
   --color-text: #1a1825;
   --shadow: 0 4px 24px rgba(26, 24, 37, 0.08);
   --shadow-hover: 0 8px 32px rgba(26, 24, 37, 0.16);
+}
+
+// ── SPACING SCALE ─────────────────────────────────────────────────────────────
+
+:root {
+  --space-2xs: 0.6rem;
+  --space-xs:  0.8rem;
+  --space-sm:  1.2rem;
+  --space-md:  1.6rem;
+  --space-lg:  2.4rem;
+  --space-xl:  3.2rem;
 }
 
 // ── FONT SIZE BASE ────────────────────────────────────────────────────────────
@@ -33,7 +44,7 @@ html {
 body {
   background-color: var(--color-bg);
   color: var(--color-text);
-  font-family: sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 1.6rem;
   line-height: 1;
   transition:
@@ -85,10 +96,10 @@ body {
 
 .page {
   min-height: 100dvh;
-  padding: 3.2rem;
+  padding: var(--space-xl);
 
   @media (max-width: 600px) {
-    padding: 1.6rem;
+    padding: var(--space-md);
   }
 }
 
@@ -96,7 +107,7 @@ body {
 
 .bento {
   display: grid;
-  gap: 1.6rem;
+  gap: var(--space-md);
   grid-template-columns: repeat(5, 1fr);
   grid-template-areas:
     "hero  hero  hero  work  work"
@@ -126,13 +137,13 @@ body {
   }
 }
 
-// ── CEL BASIS ─────────────────────────────────────────────────────────────────
+// ── CELL BASE ─────────────────────────────────────────────────────────────────
 
 .cell {
   background: var(--color-bg-cell);
   border-radius: 8px;
   box-shadow: var(--shadow);
-  padding: 3.2rem;
+  padding: var(--space-xl);
   overflow: hidden;
   transition: box-shadow 0.3s ease;
 
@@ -160,7 +171,7 @@ body {
   grid-area: contact;
 }
 
-// ── ANIMATIE: BLOKKEN VALLEN NAAR BENEDEN ─────────────────────────────────────
+// ── ANIMATION ─────────────────────────────────────────────────────────────────
 
 @keyframes fall-in {
   from {
@@ -196,12 +207,9 @@ body {
   .cell--contact {
     animation-delay: 0.45s;
   }
-  // .cell--placeholder {
-  //   animation-delay: 0.4s;
-  // }
 }
 
-// ── CEL HEADING ───────────────────────────────────────────────────────────────
+// ── CELL HEADING ──────────────────────────────────────────────────────────────
 
 .cell-heading {
   font-size: 1.2rem;
@@ -209,10 +217,10 @@ body {
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--color-text-muted);
-  margin-bottom: var(--margin-md);
+  margin-bottom: var(--space-sm);
 }
 
-// ── HERO CEL ──────────────────────────────────────────────────────────────────
+// ── HERO CELL ─────────────────────────────────────────────────────────────────
 
 .cell--hero {
   display: grid;
@@ -256,7 +264,7 @@ body {
 .skills {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.8rem;
+  gap: var(--space-xs);
   list-style: none;
 }
 
@@ -266,7 +274,7 @@ body {
   font-size: 1.2rem;
   font-weight: 600;
   line-height: 1;
-  padding: 0.6rem 1.2rem;
+  padding: var(--space-2xs) var(--space-sm);
   border-radius: 4px;
   border: 1px solid var(--color-accent-1);
   color: var(--color-accent-1);
@@ -284,7 +292,7 @@ body {
 .hero-cta {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.2rem;
+  gap: var(--space-sm);
   align-items: center;
 }
 
@@ -297,7 +305,7 @@ body {
     var(--color-accent-2)
   );
   border-radius: 8px;
-  margin-bottom: 8rem;
+  margin-bottom: 8rem; // intentional exception — offsets the overlapping avatar circle
   min-height: 14rem;
   order: -1;
 
@@ -334,10 +342,9 @@ body {
 .btn {
   display: inline-flex;
   align-items: center;
-  gap: 0.6rem;
+  gap: var(--space-2xs);
   padding: 1rem 2rem;
   border-radius: 4px;
-  font-family: "Inter", sans-serif;
   font-size: 1.4rem;
   font-weight: 600;
   letter-spacing: 0.02em;
@@ -354,7 +361,7 @@ body {
 
 .btn--primary {
   background: var(--color-accent-2);
-  color: var(--color-bg); 
+  color: var(--color-bg);
 
   &:hover {
     background: var(--color-accent-1);
@@ -373,7 +380,7 @@ body {
   }
 }
 
-// ── WERKERVARING CEL ──────────────────────────────────────────────────────────
+// ── WORK EXPERIENCE CELL ──────────────────────────────────────────────────────
 
 .cell--work {
   display: flex;
@@ -389,7 +396,7 @@ body {
 .timeline-item {
   position: relative;
   padding-left: 2rem;
-  padding-bottom: 3.2rem;
+  padding-bottom: var(--space-xl);
   border-left: 2px solid var(--color-accent-1);
 
   &::before {
@@ -418,8 +425,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 1.6rem;
-  margin-bottom: 0.8rem;
+  gap: var(--space-md);
+  margin-bottom: var(--space-xs);
   flex-wrap: wrap;
 }
 
@@ -447,17 +454,17 @@ body {
   line-height: 1.65;
 }
 
-// ── NEVENROLLEN CEL ───────────────────────────────────────────────────────────
+// ── SIDE ROLES CELL ───────────────────────────────────────────────────────────
 
 .roles {
   display: flex;
   flex-direction: column;
-  gap: 2.4rem;
+  gap: var(--space-lg);
 }
 
 .role-item {
   display: flex;
-  gap: 1.6rem;
+  gap: var(--space-md);
   align-items: flex-start;
 }
 
@@ -471,7 +478,7 @@ body {
 .role-title {
   font-size: 1.6rem;
   font-weight: 700;
-  margin-bottom: 0.6rem;
+  margin-bottom: var(--space-2xs);
 }
 
 .role-desc {
@@ -480,18 +487,18 @@ body {
   line-height: 1.65;
 }
 
-// ── WERKERVARING CEL ──────────────────────────────────────────────────────────
+// ── PROJECTS CELL ─────────────────────────────────────────────────────────────
 
 .cell--projects {
   display: flex;
   flex-direction: column;
 
   .skills {
-    margin-top: var(--margin-sm);
+    margin-top: var(--space-xs);
 
     .skill {
       font-size: 1rem;
-      padding: 0.4rem 0.8rem;
+      padding: 0.4rem var(--space-xs);
       border-color: var(--color-accent-2);
       color: var(--color-accent-2);
 
@@ -503,7 +510,7 @@ body {
   }
 }
 
-// ── BLOG CEL ──────────────────────────────────────────────────────────────────
+// ── BLOG CELL ─────────────────────────────────────────────────────────────────
 
 .cell--blog {
   display: flex;
@@ -539,13 +546,12 @@ body {
 .post-link {
   display: inline-flex;
   align-items: center;
-  gap: 0.6rem;
+  gap: var(--space-2xs);
   font-size: 1.4rem;
   font-weight: 600;
-  font-family: "Inter", sans-serif;
   color: var(--color-accent-1);
   margin-top: auto;
-  padding-top: 0.8rem;
+  padding-top: var(--space-xs);
   transition: color 0.2s ease;
 
   &::after {
@@ -568,12 +574,12 @@ body {
   }
 }
 
-// ── CONTACT CEL ───────────────────────────────────────────────────────────────
+// ── CONTACT CELL ──────────────────────────────────────────────────────────────
 
 .cell--contact {
   display: flex;
   flex-direction: column;
-  gap: 1.6rem;
+  gap: var(--space-md);
   align-items: flex-start;
   justify-content: flex-start;
 }
@@ -584,7 +590,7 @@ body {
   line-height: 1.65;
 }
 
-// ── PLACEHOLDER CEL ───────────────────────────────────────────────────────────
+// ── PLACEHOLDER CELL ──────────────────────────────────────────────────────────
 
 .cell--placeholder {
   background: transparent;
@@ -595,9 +601,3 @@ body {
     box-shadow: none;
   }
 }
-
-// @media (max-width: 480px) {
-//   .cell {
-//     padding: 1.6rem;
-//   }
-// }
